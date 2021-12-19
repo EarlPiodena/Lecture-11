@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	int num, x, y = 0;
+	cout << "Enter a number you want the table of, also the number you want it to end at: " << endl;
+	cin >> num >> x;
+
+	while (cin.fail())
+	{
+		cout << "Invalid Input. Enter the number again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> num >> x;
+	}
+	while (num <= 10)
+	{
+		cout << num << " x " << y << " = " << num * y << endl;
+		y++;
+	}
+}
